@@ -43,8 +43,8 @@ KEYFRAMES =
 
 ENTRYWAY =
   nightEnd:
-    8: { bri: 50 }
-    9: { bri: 50 }
+    8: { bri: 10 }
+    9: { bri: 10 }
   dawn:
     8: { bri: 200 }
     9: { bri: 200 }
@@ -64,11 +64,11 @@ ENTRYWAY =
     8: { bri: 255 }
     9: { bri: 255 }
   bedtime:
-    8: { bri: 150 }
-    9: { bri: 150 }
+    8: { bri: 100 }
+    9: { bri: 100 }
   sleep:
-    8: { bri: 50 }
-    9: { bri: 50 }
+    8: { bri: 10 }
+    9: { bri: 10 }
   off:
     8: { bri: 0 }
     9: { bri: 0 }
