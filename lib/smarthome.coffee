@@ -1,5 +1,7 @@
 _ = require 'lodash'
 
+moment = require 'moment'
+
 SceneMaker = require './SceneMaker'
 
 hue = require 'node-hue-api'
@@ -31,10 +33,10 @@ setScene = (scene) ->
     api.setLightState lightID, state
       .done()
 
-  # console.log moment().format('h:mm a - '), JSON.stringify(scene, null, 2), '\n'
-
 setCurrentFrame = ->
-  setScene smMain.getCurrentScene()
+  currentScene = smMain.getCurrentScene()
+  console.log currentScene
+  setScene currentScene
 
 turnOnEntryway = ->
   setScene smEntry.getCurrentScene()

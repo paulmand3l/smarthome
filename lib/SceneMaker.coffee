@@ -18,6 +18,7 @@ class SceneMaker
 
   getScene: (time) ->
     [prev, next] = @getBoundingScenes time
+    console.log "#{moment().format('h:mm a')} is after #{prev.name} (#{prev.time.format('h:mm a')}) but before #{next.name} (#{next.time.format('h:mm a')})"
 
     percentage = getPercent time.valueOf(), prev.time.valueOf(), next.time.valueOf()
 
@@ -41,10 +42,10 @@ class SceneMaker
       ]
 
     for timeData, i in times
-      if time.isAfter timeData.time
+      if time.isBefore timeData.time
         return [
+          times[i-1]
           times[i]
-          times[i+1]
         ]
 
 module.exports = SceneMaker
